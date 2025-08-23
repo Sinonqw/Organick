@@ -1,15 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/shared/Header";
+import { Roboto, Open_Sans } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Roboto
+const roboto = Roboto({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-roboto",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Open Sans
+const openSans = Open_Sans({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal"],
+  variable: "--font-open-sans",
+  display: "swap",
+});
+
+// Yellowtail (в Google Fonts он идёт только regular 400)
+import { Yellowtail } from "next/font/google";
+import Footer from "@/components/shared/Footer/Footer";
+const yellowtail = Yellowtail({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-yellowtail",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +42,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${roboto.variable} ${openSans.variable} ${yellowtail.variable}`}
+    >
+      <body>
+        <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );
