@@ -1,7 +1,13 @@
-import Image from "next/image";
+import AboutUs from "@/components/sections/AboutUs/AboutUs";
+import Hero from "@/components/sections/Hero";
+import Promo from "@/components/sections/Promo/Promo";
 
 export default function Home() {
   return (
-    <h1></h1>
-  )
+    <>
+      <Hero />
+      <Promo />
+      <AboutUs/>
+    </>
+  );
 }
