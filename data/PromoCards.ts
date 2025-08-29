@@ -11,6 +11,7 @@ export const cards = [
     title: 'Get 10% offon Vegetables',
     subtitleColor: '#7EB693',
     titleColor: '#274C5B'
-  }
+  },
+
 ]
 export default cards

@@ -147,3 +147,32 @@ body {
     @apply font-bold;
   }
 }
+
+
+/* Эффект увеличения при наведении */
+.article-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.article-hover-effect:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Анимация появления карточки */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-item-animation {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0; 
+}

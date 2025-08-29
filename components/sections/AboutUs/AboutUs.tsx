@@ -5,6 +5,7 @@ import Title from "@/components/ui/Title";
 import Desc from "@/components/ui/Desc";
 import Button from "@/components/ui/Button";
 import FeatureItem from "./FeatureItem";
+import features from "@/data/Features";
 
 const AboutUs = () => {
   return (
@@ -30,11 +31,19 @@ const AboutUs = () => {
         </div>
 
         <div className="flex flex-col gap-[30px] mb-[46px]">
-          <FeatureItem desc="Simply dummy text of the printing and typesetting industry. Lorem Ipsum" img="/icons/organick-food.svg" title="Organic Foods Only" />
-          <FeatureItem desc="Simply dummy text of the printing and typesetting industry. Lorem Ipsum" img="/icons/quality.svg" title="Quality Standards"/>
+          {features.map((item, i) => (
+            <FeatureItem
+              desc={item.desc}
+              img={item.img}
+              title={item.title}
+              key={i}
+            />
+          ))}
         </div>
 
-        <Button colorBg="#274C5B" colorText="#FFFFFF">Shop Now</Button>
+        <Button colorBg="#274C5B" colorText="#FFFFFF">
+          Shop Now
+        </Button>
       </div>
     </section>
   );
