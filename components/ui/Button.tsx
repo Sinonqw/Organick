@@ -10,11 +10,11 @@ interface IButton {
 
 const Button = ({children, colorBg = '#000', colorText = 'white'}: IButton) => {
   return (
-    <Link href={'/'} className='roboto font-bold text-[20px] py-7 px-9 rounded-[16px] flex gap-[10px] max-w-[220px]'
+    <Link href={'/'} className='roboto font-bold text-[20px] py-7 px-9 rounded-[16px] gap-[10px] inline-block'
     style={{backgroundColor: colorBg, color: colorText  }}
     >
       {children}
-      <Image src={'/arrow-icon.svg'} alt='' width={19} height={19}/>
+      <Image src={'/arrow-icon.svg'} alt='' width={19} height={19} className='inline-block ml-[10px]'/>
     </Link>
   )
 }

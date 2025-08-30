@@ -3,12 +3,8 @@ import Image from "next/image";
 
 import { IProductCard } from "@/data/Products";
 
-// Добавляем импорт стилей, если вы используете CSS-модули, или стили ниже.
-// import styles from './ProductCard.module.css';
-
 const ProductCard = ({ tag, title, img, cost }: IProductCard) => {
   return (
-    // Применяем класс для анимации на li
     <li className="list-item-animation">
       <article className="bg-[#F9F8F8] py-5 px-6 rounded-2xl article-hover-effect">
         <span className="inline-block py-[6px] px-4 bg-[#274C5B] text-white open-sans font-semibold text-[15px] rounded-[8px] text-center">
