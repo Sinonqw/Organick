@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import Offer from "@/components/sections/Offer/Offer";
 import OurProducts from "@/components/sections/OurProducts/OurProducts";
 import Promo from "@/components/sections/Promo/Promo";
+import Story from "@/components/sections/Story/Story";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <OurProducts />
       <Benefits />
       <Offer />
+      <Story />
     </>
   );
 }
