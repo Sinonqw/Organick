@@ -6,11 +6,12 @@ interface IButton {
   children: ReactNode
   colorBg?: string
   colorText?: string
+  className?: string
 }
 
-const Button = ({children, colorBg = '#000', colorText = 'white'}: IButton) => {
+const Button = ({children, colorBg = '#EFD372', colorText = 'white', className}: IButton) => {
   return (
-    <Link href={'/'} className='roboto font-bold text-[20px] py-7 px-9 rounded-[16px] gap-[10px] inline-block'
+    <Link href={'/'} className={`roboto font-bold text-[20px] py-7 px-9 rounded-[16px] gap-[10px] inline-block ${className}`}
     style={{backgroundColor: colorBg, color: colorText  }}
     >
       {children}

@@ -1,9 +1,7 @@
 import React, { useMemo } from "react";
-import Subtitle from "@/components/ui/Subtitle";
-import Title from "@/components/ui/Title";
-import Button from "@/components/ui/Button";
 import { Products } from "@/data/Products";
 import ProductCard from "../OurProducts/ProductCard";
+import HeaderSect from "@/components/ui/HeaderSect";
 
 const Offer = () => {
   function getRandomItems<T>(array: T[], count: number): T[] {
@@ -24,17 +22,15 @@ const Offer = () => {
 
   return (
     <section className="bg-[#274C5B] py-50 px-10">
-      <div className="flex justify-between items-end gap-3 mb-[50px]">
-        <div>
-          <Subtitle color="#7EB693" size={36} className="mb-2">
-            Offer
-          </Subtitle>
-          <Title color="white" size={50}>
-            We Offer Organic For You
-          </Title>
-        </div>
-        <Button colorBg="#EFD372">View All Product</Button>
-      </div>
+      <HeaderSect
+
+        btnText="View All Product"
+        btnTextColor="#274C5B"
+        subtitleColor="#7EB693"
+        subtitleText="Offer"
+        titleColor="#FFFFFF"
+        titleText="We Offer Organic For You"
+      />
 
       <div>
         <ul className="grid grid-cols-4 gap-5">
