@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 interface IDesc {
   children: ReactNode
-  size: number
+  size?: number
   className?: string
 }
 

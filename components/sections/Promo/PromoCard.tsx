@@ -11,7 +11,7 @@ interface IPromoCard {
   titleColor?: string
 }
 
-const PromoCard = ({ img, subtitle, title, subtitleColor = "#fff", titleColor = "#fff" }: IPromoCard) => {
+const PromoCard = ({ img, subtitle, title, subtitleColor = "#7EB693", titleColor = "#fff" }: IPromoCard) => {
   return (
     <div className="relative max-w-[680px] w-full py-25 px-14 rounded-2xl overflow-hidden">
       <Image

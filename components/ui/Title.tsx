@@ -8,7 +8,7 @@ interface ITitle {
   bold?: string
 }
 
-const Title = ({ children, color = "#000", size = 24, className, bold = 'extrabold' }: ITitle) => {
+const Title = ({ children, color = "#274C5B", size = 24, className, bold = 'extrabold' }: ITitle) => {
   if (bold == 'medium'){
     return (
       <h4

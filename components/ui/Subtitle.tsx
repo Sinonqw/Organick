@@ -7,7 +7,7 @@ interface ISubtitle {
   className?: string
 }
 
-const Subtitle = ({ children, color = "#000", size = 36, className }: ISubtitle) => {
+const Subtitle = ({ children, color = "#7EB693", size = 36, className }: ISubtitle) => {
   return (
     <h3
       className={`yellowtail ${className}`}

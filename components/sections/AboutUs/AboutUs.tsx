@@ -16,14 +16,14 @@ const AboutUs = () => {
 
       <div>
         <div className="max-w-[702px] mb-[46px]">
-          <Subtitle size={36} color="#7eb693" className="mb-2">
+          <Subtitle size={36} className="mb-2">
             About Us
           </Subtitle>
           <Title color="#274c5b" size={50} className="mb-[14px]">
             We Believe in Working Accredited Farmers
           </Title>
 
-          <Desc>
+          <Desc >
             Simply dummy text of the printing and typesetting industry. Lorem
             had ceased to been the industry's standard dummy text ever since the
             1500s, when an unknown printer took a galley.

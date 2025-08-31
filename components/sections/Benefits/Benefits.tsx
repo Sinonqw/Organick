@@ -23,7 +23,7 @@ const Benefits = () => {
 
       <div className="relative z-10 flex flex-col items-center pb-[102px] border-b-1 border-b-[#e0e0e0] mb-[102px] max-w-[800px] mx-auto">
         <div className="mb-15 flex flex-col items-center">
-          <Subtitle className="mb-2" color="#7EB693" size={36}>
+          <Subtitle className="mb-2" size={36}>
             Testimonial
           </Subtitle>
           <Title color="#274C5B" size={50}>

@@ -6,7 +6,7 @@ import Button from "./Button";
 interface IHeaderSect {
   subtitleText: string;
   titleText: string;
-  subtitleColor: string;
+  subtitleColor?: string;
   titleColor: string;
   btnText: string;
   btnBgColor?: string;

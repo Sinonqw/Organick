@@ -23,10 +23,8 @@ const Offer = () => {
   return (
     <section className="bg-[#274C5B] py-50 px-10">
       <HeaderSect
-
         btnText="View All Product"
         btnTextColor="#274C5B"
-        subtitleColor="#7EB693"
         subtitleText="Offer"
         titleColor="#FFFFFF"
         titleText="We Offer Organic For You"
