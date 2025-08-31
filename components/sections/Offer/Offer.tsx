@@ -5,18 +5,18 @@ import HeaderSect from "@/components/ui/HeaderSect";
 
 const Offer = () => {
   function getRandomItems<T>(array: T[], count: number): T[] {
-    const result: T[] = [];
-    const used = new Set<number>();
+    const newArray = [...array];
 
-    while (result.length < count && result.length < array.length) {
-      const randomIndex = Math.floor(Math.random() * array.length);
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
 
-      if (!used.has(randomIndex)) {
-        result.push(array[randomIndex]);
-        used.add(randomIndex);
-      }
+      [newArray[i], newArray[randomIndex]] = [
+        newArray[randomIndex],
+        newArray[i],
+      ];
     }
-    return result;
+
+    return newArray.slice(0, count);
   }
   const randomProducts = useMemo(() => getRandomItems(Products, 4), []);
 
