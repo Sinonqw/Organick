@@ -7,6 +7,7 @@ import Promo from "@/components/sections/Promo/Promo";
 import Story from "@/components/sections/Story/Story";
 import Tips from "@/components/sections/Tips/Tips";
 import News from "@/components/sections/News/News";
+import Newsletter from "@/components/sections/Newsletter/Newsletter";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Story />
       <Tips />
       <News />
+      <Newsletter />
     </>
   );
 }
