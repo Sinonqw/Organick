@@ -3,6 +3,7 @@ import Image from "next/image";
 import Subtitle from "@/components/ui/Subtitle";
 import Title from "@/components/ui/Title";
 import Desc from "@/components/ui/Desc";
+import COMPANY_INFO from "@/data/Story";
 
 const Story = () => {
   return (
@@ -12,37 +13,20 @@ const Story = () => {
       </div>
       <div className="py-[77px] pr-[65px] pl-[90px] rounded-2xl bg-white max-w-[789px] absolute right-0 top-[100px]">
         <div className="max-w-[600px] mb-[35px]">
-          <Subtitle size={36} className="mb-2">Eco Friendly</Subtitle>
+          <Subtitle size={36} className="mb-2">
+            Eco Friendly
+          </Subtitle>
           <Title size={50}>Econis is a Friendly Organic Store</Title>
         </div>
         <div className="flex flex-col gap-[35px]">
-          <div>
-            <Title color="#274C5B" bold="medium">
-              Start with Our Company First
-            </Title>
-            <Desc size={18}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat
-              accusantium doloremque laudantium. Sed ut perspiciatis.
-            </Desc>
-          </div>
-          <div>
-            <Title color="#274C5B" bold="medium">
-              Start with Our Company First
-            </Title>
-            <Desc size={18}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat
-              accusantium doloremque laudantium. Sed ut perspiciatis.
-            </Desc>
-          </div>
-          <div>
-            <Title color="#274C5B" bold="medium">
-              Start with Our Company First
-            </Title>
-            <Desc size={18}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat
-              accusantium doloremque laudantium. Sed ut perspiciatis.
-            </Desc>
-          </div>
+          {COMPANY_INFO.map((item, i) => (
+            <div key={i}>
+              <Title color="#274C5B" bold="medium">
+                {item.title}
+              </Title>
+              <Desc size={18}>{item.description}</Desc>
+            </div>
+          ))}
         </div>
       </div>
     </section>
