@@ -11,7 +11,7 @@ const OurProducts = () => {
         <Subtitle size={36} className="mb-2">
           Categories
         </Subtitle>
-        <Title color="#274C5B" size={50}>
+        <Title size={50}>
           Our Products
         </Title>
       </div>

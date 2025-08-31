@@ -7,7 +7,7 @@ interface IHeaderSect {
   subtitleText: string;
   titleText: string;
   subtitleColor?: string;
-  titleColor: string;
+  titleColor?: string;
   btnText: string;
   btnBgColor?: string;
   btnTextColor: string;

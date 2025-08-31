@@ -13,7 +13,7 @@ const Story = () => {
       <div className="py-[77px] pr-[65px] pl-[90px] rounded-2xl bg-white max-w-[789px] absolute right-0 top-[100px]">
         <div className="max-w-[600px] mb-[35px]">
           <Subtitle size={36} className="mb-2">Eco Friendly</Subtitle>
-          <Title color="#274C5B" size={50}>Econis is a Friendly Organic Store</Title>
+          <Title size={50}>Econis is a Friendly Organic Store</Title>
         </div>
         <div className="flex flex-col gap-[35px]">
           <div>

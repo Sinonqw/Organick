@@ -10,7 +10,6 @@ const News = () => {
         btnText="More News"
         btnTextColor="#274C5B"
         subtitleText="News"
-        titleColor="#274C5B"
         titleText="Discover weekly content about organic food, & more"
         btnClasses="border-1 border-[#274C5B]"
       />

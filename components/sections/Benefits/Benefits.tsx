@@ -26,7 +26,7 @@ const Benefits = () => {
           <Subtitle className="mb-2" size={36}>
             Testimonial
           </Subtitle>
-          <Title color="#274C5B" size={50}>
+          <Title size={50}>
             What Our Customer Saying?
           </Title>
         </div>

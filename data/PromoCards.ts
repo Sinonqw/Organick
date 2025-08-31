@@ -9,7 +9,6 @@ export const cards = [
     img: '/PromoCardsBg/peaches.jpg',
     subtitle: 'Offer!!',
     title: 'Get 10% offon Vegetables',
-    titleColor: '#274C5B'
   },
 
 ]

@@ -19,7 +19,7 @@ const AboutUs = () => {
           <Subtitle size={36} className="mb-2">
             About Us
           </Subtitle>
-          <Title color="#274c5b" size={50} className="mb-[14px]">
+          <Title size={50} className="mb-[14px]">
             We Believe in Working Accredited Farmers
           </Title>
 

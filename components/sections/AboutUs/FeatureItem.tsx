@@ -21,7 +21,7 @@ const FeatureItem = ({ img, title, desc }: IFeatureItem) => {
         />
       </div>
       <div>
-        <Title color="#274c5b" size={25} className="mb-[7px]">
+        <Title size={25} className="mb-[7px]">
           {title}
         </Title>
         <Desc>

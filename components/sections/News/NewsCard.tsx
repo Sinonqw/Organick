@@ -35,7 +35,7 @@ const NewsCard = ({ author, date, desc, title, img }: INewsCard) => {
           <p className="text-[18px] text-[#274c5b]">{author}</p>
         </div>
         <div>
-          <Title size={25} color="#274C5B">
+          <Title size={25}>
             {title}
           </Title>
           <Desc size={18}>{desc}</Desc>

@@ -18,7 +18,7 @@ const TipsCard = ({ text, img }: ITipsCard) => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                 py-[33px] px-[83px] bg-white rounded-2xl shadow-lg max-w-[320px] w-full"
       >
-        <Title bold="medium" color="#274C5B">{text}</Title>
+        <Title bold="medium">{text}</Title>
       </Link>
     </article>
   );
