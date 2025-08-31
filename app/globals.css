@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
 
 :root {
   --font-family: "Roboto", sans-serif;
@@ -10,7 +12,6 @@ body {
   padding: 0 20px 0 20px;
   margin: 0 auto;
 }
-
 
 .roboto {
   font-family: var(--font-roboto);
@@ -62,7 +63,6 @@ body {
     font-family: var(--font-roboto);
     @apply text-[18px] text-[#274c5b];
   }
-
 
   .footer {
     @apply flex justify-center gap-[50px] mb-[102px];
@@ -148,7 +148,6 @@ body {
   }
 }
 
-
 /* Эффект увеличения при наведении */
 .article-hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -174,5 +173,5 @@ body {
 
 .list-item-animation {
   animation: fadeIn 0.8s ease forwards;
-  opacity: 0; 
+  opacity: 0;
 }
