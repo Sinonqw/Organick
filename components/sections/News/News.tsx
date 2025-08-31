@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderSect from "@/components/ui/HeaderSect";
 import NewsCard from "./NewsCard";
+import NEWS_ITEMS from "@/data/News";
 
 const News = () => {
   return (
@@ -14,8 +15,16 @@ const News = () => {
         btnClasses="border-1 border-[#274C5B]"
       />
       <div className="flex justify-center gap-12">
-        <NewsCard author="By Rachi Card" date="25 Nov" desc="Simply dummy text of the printing and typesetting industry. Lorem Ipsum" img="/news/bg1.png" title="The Benefits of Vitamin D & How to Get It"/>
-        <NewsCard author="By Rachi Card" date="25 Nov" desc="Simply dummy text of the printing and typesetting industry. Lorem Ipsum" img="/news/bg2.png" title="The Benefits of Vitamin D & How to Get It"/>
+        {NEWS_ITEMS.map((item, i) => (
+          <NewsCard
+            key={i}
+            author={item.author}
+            date={item.date}
+            desc={item.desc}
+            img={item.img}
+            title={item.title}
+          />
+        ))}
       </div>
     </section>
   );
