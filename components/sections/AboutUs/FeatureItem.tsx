@@ -1,7 +1,9 @@
+// components/FeatureItem.js
 import React from "react";
 import Image from "next/image";
 import Title from "@/components/ui/Title";
 import Desc from "@/components/ui/Desc";
+import styles from "./FeatureItem.module.css"; // Импортируем стили
 
 interface IFeatureItem {
   img: string;
@@ -11,20 +13,21 @@ interface IFeatureItem {
 
 const FeatureItem = ({ img, title, desc }: IFeatureItem) => {
   return (
-    <div className="flex gap-5">
-      <div className="p-6 bg-white rounded-[20px] flex items-center justify-center">
+    <div className={styles.featureItem}>
+      <div className={styles.featureItem__imageWrapper}>
         <Image
           alt="icon"
           src={img}
           width={52}
           height={52}
+          className={styles.featureItem__image}
         />
       </div>
-      <div>
-        <Title size={25} className="mb-[7px]">
+      <div className={styles.featureItem__content}>
+        <Title size={25} className={styles.featureItem__title}>
           {title}
         </Title>
-        <Desc>
+        <Desc className={styles.featureItem__desc}>
           {desc}
         </Desc>
       </div>

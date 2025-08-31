@@ -16,7 +16,7 @@ const OurProducts = () => {
         </Title>
       </div>
 
-      <ul className="grid grid-cols-4 gap-5 ">
+      <ul className="grid grid-cols-4 gap-5">
         {Products.map((product) => (
           <ProductCard
             cost={product.cost}

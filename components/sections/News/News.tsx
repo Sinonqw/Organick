@@ -2,10 +2,11 @@ import React from "react";
 import HeaderSect from "@/components/ui/HeaderSect";
 import NewsCard from "./NewsCard";
 import NEWS_ITEMS from "@/data/News";
+import styles from "./News.module.css";
 
 const News = () => {
   return (
-    <section className="pt-[177px] pb-[185px]">
+    <section className={styles.newsSection}>
       <HeaderSect
         btnBgColor="#fff"
         btnText="More News"
@@ -14,7 +15,7 @@ const News = () => {
         titleText="Discover weekly content about organic food, & more"
         btnClasses="border-1 border-[#274C5B]"
       />
-      <div className="flex justify-center gap-12">
+      <div className={styles.newsSection__container}>
         {NEWS_ITEMS.map((item, i) => (
           <NewsCard
             key={i}

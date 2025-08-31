@@ -1,0 +1,26 @@
+.featureItem {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.featureItem__imageWrapper {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureItem__image {
+}
+
+.featureItem__content {
+}
+
+.featureItem__title {
+  margin-bottom: 0.4375rem;
+}
+
+.featureItem__desc {
+}

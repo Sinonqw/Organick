@@ -1,0 +1,124 @@
+/* =======================================================
+  Block: benefits
+========================================================= */
+.benefits {
+  position: relative;
+  overflow: hidden;
+  padding-top: 164px;
+  padding-bottom: 164px;
+}
+
+/* =======================================================
+  Elements: Backgrounds
+========================================================= */
+.benefits__bgContainer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.benefits__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/benefitsBg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.benefits__bg--top {
+  transform: none;
+}
+
+.benefits__bg--bottom {
+  transform: rotate(180deg);
+}
+
+/* =======================================================
+  Elements: Content
+========================================================= */
+.benefits__content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 102px;
+  margin-bottom: 102px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.benefits__heading {
+  margin-bottom: 60px;
+}
+
+.benefits__subtitle {
+  margin-bottom: 8px;
+}
+
+.benefits__testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 150px;
+}
+
+.benefits__userImage {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.benefits__rating {
+  margin-bottom: 24px;
+}
+
+.benefits__testimonialText {
+  max-width: 700px;
+}
+
+.benefits__userInfo {
+  margin-bottom: 20px;
+}
+
+.benefits__userName {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #274c5b;
+}
+
+.benefits__userRole {
+}
+
+.benefits__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.benefits__dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.benefits__dot--active {
+  background-color: #274c5b;
+}
+
+/* =======================================================
+  Elements: Cards
+========================================================= */
+.benefits__cards {
+  position: relative;
+  z-index: 10;
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}

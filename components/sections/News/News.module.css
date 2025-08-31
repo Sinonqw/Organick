@@ -1,0 +1,10 @@
+.newsSection {
+  padding-top: 11.0625rem;
+  padding-bottom: 11.5625rem; 
+}
+
+.newsSection__container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; 
+}

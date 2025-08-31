@@ -1,0 +1,46 @@
+.newsCard {
+  position: relative;
+}
+
+.newsCard__date {
+  position: absolute;
+  top: 3rem; 
+  left: 2.5rem; 
+  display: block;
+  background-color: white; 
+  border-radius: 9999px; 
+  padding: 1rem 1.5rem; 
+  text-align: center;
+  font-size: 1.5625rem; 
+  font-weight: 800;
+  color: #274c5b;
+}
+
+.newsCard__content {
+  position: absolute;
+  top: 17.5rem;
+  left: 2rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  max-width: 38.3125rem; 
+  background-color: white; 
+  border-radius: 1.5rem; 
+  padding: 2.875rem 3.5625rem 3.75rem; 
+  box-shadow: 0 20px 35px 0 rgba(167, 167, 167, 0.25); 
+}
+
+.newsCard__authorContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.newsCard__author {
+  font-size: 1.125rem;
+  color: #274c5b;
+}
+
+.newsCard__button {
+  max-width: 13.75rem;
+}

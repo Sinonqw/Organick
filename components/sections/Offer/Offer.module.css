@@ -1,0 +1,10 @@
+.offerSection {
+  background-color: #274c5b; 
+  padding: 12.5rem 2.5rem; 
+}
+
+.offerSection__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); 
+  gap: 1.25rem; 
+}
