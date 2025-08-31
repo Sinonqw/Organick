@@ -1,14 +1,15 @@
-import React from 'react'
-import TipsCard from './TipsCard'
+import React from "react";
+import TipsCard from "./TipsCard";
+import TIPS_CARDS from "@/data/Tips";
 
 const Tips = () => {
   return (
-    <section className='flex gap-10 py-[187px] bg-[#F1F8F4]'>
-        <TipsCard img='/TipsCards/juice.jpg' text='Organic Juice'/>
-        <TipsCard img='/TipsCards/food.jpg' text='Organic Food'/>
-        <TipsCard img='/TipsCards/nuts.jpg' text='Nuts Cookis'/>
+    <section className="flex gap-10 py-[187px] bg-[#F1F8F4]">
+      {TIPS_CARDS.map((item, i) => (
+        <TipsCard key={i} img={item.img} text={item.text} />
+      ))}
     </section>
-  )
-}
+  );
+};
 
-export default Tips
+export default Tips;
