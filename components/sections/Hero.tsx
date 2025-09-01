@@ -6,17 +6,8 @@ import Button from "../ui/Button";
 
 const Hero = () => {
   return (
-    <section className="h-[900px] flex items-center relative mb-[154px]">
-      {/* Контейнер для текстового контента, который будет поверх фона */}
-      <div className="flex-1 pl-[150px] relative z-20">
-        <div className="max-w-[530px]">
-          <Subtitle color="#68a47f">100% Natural Food</Subtitle>
-          <Title size={70}>Choose the best healthier way of life</Title>
-          <Button colorText="#274C5B">Explore Now</Button>
-        </div>
-      </div>
-
-      {/* Изображение-фон, которое будет под контентом */}
+    <section className="relative flex flex-col items-center justify-center min-h-[600px] lg:h-[900px] mb-12 sm:mb-24">
+      {/* Background Image */}
       <Image
         src="/home-hero-bg.png"
         alt="A plate of healthy food"
@@ -24,12 +15,22 @@ const Hero = () => {
         objectFit="cover"
         className="z-10"
       />
-      <Image
-        src="/bg-decor.png"
-        alt="A plate of healthy food"
-        layout="fill"
-        className="z-11"
-      />
+
+      {/* Text Content */}
+      <div className="relative z-20 w-full flex flex-col justify-center items-center text-center lg:items-start lg:text-left px-6 py-12 lg:pl-[150px] lg:py-0">
+        <div className="max-w-full lg:max-w-[530px] w-full">
+          {/* Subtitle with adaptive styles */}
+          <Subtitle className="text-xl sm:text-2xl lg:text-3xl xl:text-[36px]">100% Natural Food</Subtitle>
+          
+          {/* Title with adaptive styles */}
+          <Title className="mt-2 mb-4 text-4xl leading-tight sm:text-6xl lg:text-7xl xl:text-[70px]">
+            Choose the best healthier way of life
+          </Title>
+          
+          {/* Button with adaptive styles */}
+          <Button className="text-sm px-6 py-4 sm:text-base sm:px-8 sm:py-5 lg:text-[20px] lg:px-9 lg:py-7">Explore Now</Button>
+        </div>
+      </div>
     </section>
   );
 };

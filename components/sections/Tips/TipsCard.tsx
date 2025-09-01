@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 import Title from "@/components/ui/Title";
@@ -10,15 +11,23 @@ interface ITipsCard {
 
 const TipsCard = ({ text, img }: ITipsCard) => {
   return (
-    <article className="relative">
+    <article className="relative w-full">
       <div>
-        <Image alt="" src={img} width={612} height={583} />
+        <Image 
+          alt={text} 
+          src={img} 
+          width={612} 
+          height={583} 
+          className="w-full h-auto"
+        />
       </div>
       <Link href={'/'}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                py-[33px] px-[83px] bg-white rounded-2xl shadow-lg max-w-[320px] w-full"
+                py-4 md:py-[33px] px-8 md:px-[83px] bg-white rounded-2xl shadow-lg w-fit text-center"
       >
-        <Title bold="medium">{text}</Title>
+        <Title bold="medium" className="text-xl md:text-2xl lg:text-3xl whitespace-nowrap">
+          {text}
+        </Title>
       </Link>
     </article>
   );

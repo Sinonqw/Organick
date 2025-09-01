@@ -13,7 +13,7 @@ interface IPromoCard {
 
 const PromoCard = ({ img, subtitle, title, subtitleColor = "#7EB693", titleColor = "#274C5B" }: IPromoCard) => {
   return (
-    <div className="relative max-w-[680px] w-full py-25 px-14 rounded-2xl overflow-hidden">
+    <div className="relative w-full md:max-w-[calc(50%-18px)] lg:max-w-[680px] py-20 px-8 sm:py-25 sm:px-14 rounded-2xl overflow-hidden article-hover-effect">
       <Image
         src={img}
         alt="photo"
@@ -24,7 +24,7 @@ const PromoCard = ({ img, subtitle, title, subtitleColor = "#7EB693", titleColor
         <Subtitle color={subtitleColor} className="mb-1">
           {subtitle}
         </Subtitle>
-        <Title color={titleColor} size={40}>
+        <Title color={titleColor} className="text-2xl md:text-3xl lg:text-4xl">
           {title}
         </Title>
       </div>

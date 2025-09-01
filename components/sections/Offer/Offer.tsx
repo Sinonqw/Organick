@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { Products } from "@/data/Products";
 import ProductCard from "../OurProducts/ProductCard";
 import HeaderSect from "@/components/ui/HeaderSect";
-import styles from "./Offer.module.css";
 
 const Offer = () => {
   function getRandomItems<T>(array: T[], count: number): T[] {
@@ -22,17 +21,18 @@ const Offer = () => {
   const randomProducts = useMemo(() => getRandomItems(Products, 4), []);
 
   return (
-    <section className={styles.offerSection}>
+    <section className="bg-[#274C5B] py-16 px-4 md:py-24 md:px-6 lg:py-32 xl:py-52">
       <HeaderSect
         btnText="View All Product"
         btnTextColor="#274C5B"
         subtitleText="Offer"
+        btnClasses="py-7 px-10"
         titleColor="#FFFFFF"
         titleText="We Offer Organic For You"
       />
 
       <div>
-        <ul className={styles.offerSection__list}>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {randomProducts.map((product, i) => (
             <ProductCard
               cost={product.cost}

@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import TESTIMONIALS from "@/data/Testimonials";
 import BENEFITS from "@/data/Benefits";
-import styles from "./Benefits.module.css"; // Import CSS Module
 
 const Benefits = () => {
   const [current, setCurrent] = useState(0);
@@ -43,20 +42,22 @@ const Benefits = () => {
   };
 
   return (
-    <section className={styles.benefits}>
+    <section className="relative overflow-hidden pt-16 pb-16 sm:pt-24 sm:pb-24 lg:pt-[164px] lg:pb-[164px]">
       {/* Декоративные фоны */}
-      <div className={styles.benefits__bgContainer}>
-        <div className={`${styles.benefits__bg} ${styles["benefits__bg--top"]}`} />
-        <div className={`${styles.benefits__bg} ${styles["benefits__bg--bottom"]}`} />
+      <div className="hidden lg:block absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[url('/benefitsBg.png')] bg-no-repeat bg-contain" />
+        <div className="absolute inset-0 bg-[url('/benefitsBg.png')] bg-no-repeat bg-contain transform rotate-180" />
       </div>
 
       {/* Заголовки + отзыв */}
-      <div className={styles.benefits__content}>
-        <div className={styles.benefits__heading}>
-          <Subtitle className={styles.benefits__subtitle} size={36}>
+      <div className="relative z-10 max-w-[800px] mx-auto text-center pb-16 mb-16 sm:pb-[102px] sm:mb-[102px] border-b border-gray-300 px-4">
+        <div className="mb-8 sm:mb-12">
+          <Subtitle className="mb-2 text-2xl sm:text-3xl lg:text-4xl">
             Testimonial
           </Subtitle>
-          <Title size={50}>What Our Customer Saying?</Title>
+          <Title className="text-3xl sm:text-4xl md:text-5xl">
+            What Our Customer Saying?
+          </Title>
         </div>
 
         <AnimatePresence mode="wait">
@@ -70,42 +71,42 @@ const Benefits = () => {
               duration: 0.7,
               ease: [0.34, 1.56, 0.64, 1],
             }}
-            className={styles.benefits__testimonial}
+            className="flex flex-col items-center mb-8 min-h-[150px]"
           >
             <Image
               src={t.user}
               alt={t.name}
               width={115}
               height={115}
-              className={styles.benefits__userImage}
+              className="rounded-full mb-5"
             />
             <Image
               alt="Rating: 5 out of 5 stars"
               src="/icons/stars.svg"
               width={122}
               height={26}
-              className={styles.benefits__rating}
+              className="mb-6"
             />
-            <Desc size={18} className={styles.benefits__testimonialText}>
+            <Desc className="text-sm sm:text-base lg:text-lg max-w-[700px]">
               {t.text}
             </Desc>
           </motion.div>
         </AnimatePresence>
 
-        <div className={styles.benefits__userInfo}>
-          <h4 className={styles.benefits__userName}>{t.name}</h4>
-          <Desc size={15} className={styles.benefits__userRole}>
-            {t.role}
-          </Desc>
+        <div className="mb-5">
+          <h4 className="roboto font-semibold text-lg sm:text-xl text-[#274C5B] mb-1">
+            {t.name}
+          </h4>
+          <Desc className="text-xs sm:text-sm">{t.role}</Desc>
         </div>
 
-        {/* точки пагинации под будущий слайдер */}
-        <div className={styles.benefits__pagination}>
+        {/* точки пагинации */}
+        <div className="flex justify-center gap-2">
           {TESTIMONIALS.map((_, i) => (
             <span
               key={i}
-              className={`${styles.benefits__dot} ${
-                i === current ? styles["benefits__dot--active"] : ""
+              className={`block w-2 h-2 rounded-full transition-colors duration-300 ${
+                i === current ? "bg-black" : "bg-gray-400"
               }`}
             />
           ))}
@@ -113,7 +114,7 @@ const Benefits = () => {
       </div>
 
       {/* Карточки преимуществ */}
-      <div className={styles.benefits__cards}>
+      <div className="relative z-10 gap-3 max-w-full lg:max-w-[1030px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-items-center sm:gap-3 lg:gap-16">
         {BENEFITS.map((b, i) => (
           <BenefitCard key={i} text={b.text} title={b.title} />
         ))}
