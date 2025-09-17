@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Products } from "@/data/Products";
-import ProductCard from "../OurProducts/ProductCard";
+import ProductCard from "../../ourProducts/ProductCard";
 import HeaderSect from "@/components/ui/HeaderSect";
 
 const Offer = () => {

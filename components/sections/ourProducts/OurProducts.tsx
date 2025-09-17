@@ -3,6 +3,7 @@ import Title from "@/components/ui/Title";
 import React from "react";
 import ProductCard from "./ProductCard";
 import { Products } from "@/data/Products";
+import ProductsList from "../ProductsList";
 
 const OurProducts = () => {
   return (
@@ -16,17 +17,7 @@ const OurProducts = () => {
         </Title>
       </div>
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-        {Products.map((product) => (
-          <ProductCard
-            cost={product.cost}
-            img={product.img}
-            tag={product.tag}
-            title={product.title}
-            key={product.title}
-          />
-        ))}
-      </ul>
+      <ProductsList count={8} products={Products}/>
     </section>
   );
 };

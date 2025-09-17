@@ -9,7 +9,7 @@ interface ISubtitle {
 const Subtitle = ({ children, color = "#7EB693", className }: ISubtitle) => {
   return (
     <h3
-      className={`yellowtail ${className}`}
+      className={`yellowtail ${className} text-4xl`}
       style={{ color }}
     >
       {children}

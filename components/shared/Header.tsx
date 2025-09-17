@@ -5,12 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navBarLinks = [
-  { text: "Home", link: "/home" },
+  { text: "Home", link: "/" },
   { text: "About", link: "/about" },
-  { text: "Pages", link: "/pages" },
   { text: "Shop", link: "/shop" },
-  { text: "Projects", link: "/project" },
-  { text: "News", link: "/news" },
 ];
 
 const Header = () => {

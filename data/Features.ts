@@ -1,4 +1,4 @@
-export const features = [
+export const featuresHome = [
   {
     img: "/icons/organick-food.svg",
     title: "Organic Foods Only",
@@ -10,5 +10,16 @@ export const features = [
     desc: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
   },
 ];
+export const featuresAbout = [
+  {
+    img: "/icons/tractor.svg",
+    title: "Modern Agriculture Equipment",
+    desc: "",
+  },
+  {
+    img: "/icons/chemi.svg",
+    title: "No growth hormones are used",
+    desc: "",
+  },
+];
 
-export default features;
