@@ -1,21 +1,29 @@
-import React from 'react'
-import ProductCard from './ourProducts/ProductCard'
-import { Products } from '@/data/Products'
+import React from "react";
+import ProductCard from "./ourProducts/ProductCard";
 
-const ProductsList = ({ products, count }: { products: typeof Products; count: number }) => {
+export interface IProduct {
+  _id: string;
+  tag: string;
+  title: string;
+  img: string;
+  cost: number;
+}
+
+const ProductsList = ({ products, count }: { products: IProduct[]; count: number }) => {
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
       {products.slice(0, count).map((product) => (
         <ProductCard
-          cost={product.cost}
-          img={product.img}
+          key={product._id}
+          _id={product._id.toString()}
           tag={product.tag}
           title={product.title}
-          key={product.title}
+          img={product.img}
+          cost={product.cost}
         />
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default ProductsList
+export default ProductsList;

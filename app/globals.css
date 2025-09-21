@@ -29,6 +29,7 @@ body {
   font-family: var(--font-yellowtail);
 }
 
+
 @layer components {
   .header {
     @apply flex justify-between items-center py-11;

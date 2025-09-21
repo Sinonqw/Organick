@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import { Roboto, Open_Sans } from "next/font/google";
+import { CartProvider } from "./context/CartContext";
 
 // Roboto
 const roboto = Roboto({
@@ -47,9 +48,11 @@ export default function RootLayout({
       className={`${roboto.variable} ${openSans.variable} ${yellowtail.variable}`}
     >
       <body>
-        <Header />
-        {children}
-        <Footer/>
+        <CartProvider>
+          <Header />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
