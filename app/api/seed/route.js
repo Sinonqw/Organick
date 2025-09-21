@@ -1,5 +1,5 @@
 import connectDB from "@/app/lib/dbConnect";
-import Product from "../../models/Product";
+import Product from "@/models/Product";
 import {Products} from "@/data/Products"
 import { NextResponse } from "next/server";
 
