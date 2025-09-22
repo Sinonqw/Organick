@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "node_modules/Header.tsx", "app/shop/[productInner]/lib/dbConnect.ts", "app/api/products/route.js", "models/Product.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "node_modules/Header.tsx", "app/shop/[productInner]/lib/dbConnect.ts", "app/api/products/route.js", "models/Product.js", "lib/dbConnect.js"],
   "exclude": ["node_modules"]
 }
