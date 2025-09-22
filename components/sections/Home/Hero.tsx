@@ -28,7 +28,7 @@ const Hero = () => {
           </Title>
           
           {/* Button with adaptive styles */}
-          <Button className="text-sm px-6 py-4 sm:text-base sm:px-8 sm:py-5 lg:text-[20px] lg:px-9 lg:py-7">Explore Now</Button>
+          <Button href="/shop" className="text-sm px-6 py-4 sm:text-base sm:px-8 sm:py-5 lg:text-[20px] lg:px-9 lg:py-7">Explore Now</Button>
         </div>
       </div>
     </section>

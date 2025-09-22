@@ -40,7 +40,7 @@ const NewsCard = ({ author, date, desc, title, img }: INewsCard) => {
           <Title className="text-xl xl:text-2xl">{title}</Title>
           <Desc className="text-md xl:text-xl">{desc}</Desc>
         </div>
-        <Button className="py-3 px-6 xl:py-7 xl:12">Read More</Button>
+        {/* <Button className="py-3 px-6 xl:py-7 xl:12">Read More</Button> */}
       </div>
     </article>
   );

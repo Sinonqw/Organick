@@ -67,7 +67,7 @@ const AboutUs = ({ img, desc, features, subtitile, title, flex }: IAbout) => {
           </div>
         )}
 
-        <Button colorBg="#274C5B" colorText="#FFFFFF" className="py-7 px-12">
+        <Button href="/shop" colorBg="#274C5B" colorText="#FFFFFF" className="py-7 px-12">
           Shop Now
         </Button>
       </div>

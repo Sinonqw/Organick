@@ -7,12 +7,13 @@ interface IButton {
   colorBg?: string
   colorText?: string
   className?: string
+  href?: string
 }
 
-const Button = ({children, colorBg = '#EFD372', colorText = 'white', className}: IButton) => {
+const Button = ({children, colorBg = '#EFD372', colorText = 'white', className, href}: IButton) => {
   return (
     <Link 
-      href={'/'} 
+      href={`${href}`} 
       className={`roboto font-bold rounded-[16px] gap-[10px] inline-flex items-center justify-center ${className}`}
       style={{backgroundColor: colorBg, color: colorText}}
     >

@@ -43,6 +43,7 @@ const Offer = () => {
         btnClasses="py-7 px-10"
         titleColor="#FFFFFF"
         titleText="We Offer Organic For You"
+        href="/shop"
       />
 
       <div>
