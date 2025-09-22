@@ -10,6 +10,10 @@ input {
   outline: none;
 }
 
+button {
+  cursor: pointer
+}
+
 body {
   max-width: 1555px;
   padding: 0 20px 0 20px;
