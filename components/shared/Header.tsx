@@ -57,9 +57,15 @@ const Header = () => {
       <div className="flex gap-4 order-2 xl:order-3 xl:flex-row xl:gap-6 items-center">
         <Link
           href="/cart"
-          className="flex items-center gap-2 cursor-pointer relative"
+          className="flex items-center gap-2 cursor-pointer relative transition-transform duration-200 hover:scale-105 group"
         >
-          <Image src={"/cart-icon.svg"} alt="cart" width={28} height={28} />
+          <Image 
+            src={"/cart-icon.svg"} 
+            alt="cart" 
+            width={28} 
+            height={28} 
+            className="group-hover:animate-shake"
+          />
           <span className="cart_text hidden sm:block">Cart ({cartItems.length})</span>
         </Link>
 
