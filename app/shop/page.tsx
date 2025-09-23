@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Banner from "@/components/sections/Banner";
+import Banner from "@/components/shared/Banner";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
-import ProductsList, { IProduct } from "@/components/sections/ProductsList";
+import ProductsList, { IProduct } from "@/components/sections/products/ProductsList";
 
 const ShopPage = () => {
   const [products, setProducts] = useState<IProduct[]>([]);

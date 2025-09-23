@@ -14,19 +14,22 @@ export interface IProductCard {
 }
 
 const ProductCard = ({ _id, tag, title, img, cost }: IProductCard) => {
-  const { addToCart } = useCart();
+  const { addItem } = useCart();
   const [added, setAdded] = useState(false);
 
   const handleAdd = () => {
-    addToCart({ _id, tag, title, img, cost, quantity: 1 });
+    addItem({ _id, title, cost });
     setAdded(true);
-    setTimeout(() => setAdded(false), 700); // анимация 0.7с
+    setTimeout(() => setAdded(false), 700);
   };
 
   return (
     <li className="w-full">
       <article className="bg-[#F9F8F8] p-4 md:p-6 rounded-2xl h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
-        <Link href={`/shop/${_id}`} className="flex-1 flex flex-col no-underline">
+        <Link
+          href={`/shop/${_id}`}
+          className="flex-1 flex flex-col no-underline"
+        >
           <span className="inline-block py-1 px-3 bg-[#274C5B] text-white text-xs rounded-lg self-start">
             {tag}
           </span>

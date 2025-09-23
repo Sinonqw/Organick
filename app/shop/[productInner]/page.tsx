@@ -1,9 +1,10 @@
 import connectDb from "@/lib/dbConnect";
 import Product from "@/models/Product";
-import Banner from "@/components/sections/Banner";
+import Banner from "@/components/shared/Banner";
 import Image from "next/image";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
-import ProductsList from "@/components/sections/ProductsList";
+import ProductsList from "@/components/sections/products/ProductsList";
+import AddToCartButton from "@/components/sections/cart/AddToCartButton";
 
 interface IProps {
   params: { productInner: string };
@@ -11,15 +12,11 @@ interface IProps {
 
 const ShopSingle = async ({ params }: IProps) => {
   if (!params.productInner) return <div>Product ID not provided</div>;
-
   // Подключаемся к БД
   await connectDb();
-
   // Получаем товар по id
   const product = await Product.findById(params.productInner);
-
   if (!product) return <div>Product not found</div>;
-
   // Получаем другие продукты для блока "Похожие товары"
   const otherProducts = await Product.find({
     _id: { $ne: params.productInner },
@@ -65,18 +62,8 @@ const ShopSingle = async ({ params }: IProps) => {
             </p>
             <div className="flex items-center gap-4">
               <span className="text-lg font-semibold text-[#274C5B]">
-                Quantity :
               </span>
-              <div className="flex items-center border border-[#969696] rounded-lg">
-                <input
-                  type="number"
-                  defaultValue={1}
-                  className="w-20 text-center py-2 px-3 focus:outline-none"
-                />
-              </div>
-              <button className="bg-[#274C5B] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
-                Add To Cart
-              </button>
+              <AddToCartButton product={JSON.parse(JSON.stringify(product))} />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState, useEffect } from "react";
-import ProductCard from "../../ourProducts/ProductCard";
+import ProductCard from "../../products/ProductCard";
 import HeaderSect from "@/components/ui/HeaderSect";
 
 interface IProduct {

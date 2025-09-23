@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "@/components/sections/Banner";
+import Banner from "@/components/shared/Banner";
 import AboutUs from "@/components/sections/aboutUs/AboutUs";
 import { featuresAbout } from "@/data/Features";
 import WhyChooseUs from "@/components/sections/About/WhyChoose/WhyChooseUs";

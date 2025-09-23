@@ -2,7 +2,7 @@
 import Subtitle from "@/components/ui/Subtitle";
 import Title from "@/components/ui/Title";
 import React, { useEffect, useState } from "react";
-import ProductsList from "../ProductsList";
+import ProductsList from "./ProductsList";
 
 interface IProduct {
   _id: string;

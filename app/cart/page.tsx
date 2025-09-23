@@ -1,13 +1,11 @@
 "use client";
 
 import React from "react";
-import { useCart } from "../context/CartContext";
-import { FaTrashAlt } from "react-icons/fa"; // Используем иконку для кнопки удаления
+import { useCart } from "@/app/context/CartContext";
+import { FaTrashAlt } from "react-icons/fa";
 
 const CartPage = () => {
-  const { cartItems, removeFromCart, clearCart } = useCart();
-
-  const total = cartItems.reduce((acc, item) => acc + item.cost, 0);
+  const { cartItems, removeItem, total, clearCart } = useCart();
 
   return (
     <div className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16 min-h-screen">
@@ -28,13 +26,15 @@ const CartPage = () => {
                 <div key={item._id} className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-[#274C5B]">{item.title}</h3>
-                    <p className="text-sm text-gray-500 mt-1">Freshly sourced</p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Freshly sourced <span className="text-gray-400">x {item.quantity}</span>
+                    </p>
                   </div>
                   <div className="flex items-center space-x-6">
-                    <span className="text-xl font-bold text-gray-700">${item.cost.toFixed(2)}</span>
+                    <span className="text-xl font-bold text-gray-700">${(item.cost * item.quantity).toFixed(2)}</span>
                     <button
                       className="text-red-500 hover:text-red-700 transition-colors"
-                      onClick={() => removeFromCart(item._id)}
+                      onClick={() => removeItem(item._id)}
                       aria-label={`Remove ${item.title} from cart`}
                     >
                       <FaTrashAlt className="w-5 h-5" />
@@ -52,7 +52,7 @@ const CartPage = () => {
               <div className="flex flex-col md:flex-row gap-4 mt-6">
                 <button
                   className="w-full md:w-auto flex-1 bg-[#274C5B] text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
-                  onClick={() => alert("Proceed to Checkout")} // Замените на реальную логику оформления заказа
+                  onClick={() => console.log("Proceed to Checkout")} 
                 >
                   Proceed to Checkout
                 </button>

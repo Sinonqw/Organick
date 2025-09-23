@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./ourProducts/ProductCard";
+import ProductCard from "./ProductCard";
 
 export interface IProduct {
   _id: string;

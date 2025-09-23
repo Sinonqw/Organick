@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Subtitle from "../../ui/Subtitle";
-import Title from "../../ui/Title";
-import Button from "../../ui/Button";
+import Subtitle from "../ui/Subtitle";
+import Title from "../ui/Title";
+import Button from "../ui/Button";
 
 const Hero = () => {
   return (
