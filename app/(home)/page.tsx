@@ -23,7 +23,7 @@ Accredited Farmers" />
       <Offer />
       <Story />
       <Tips />
-      <News />
+      <News /> 
       <Newsletter />
     </>
   );

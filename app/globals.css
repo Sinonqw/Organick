@@ -197,7 +197,6 @@ body {
 /* Other effects remain the same */
 .article-hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .article-hover-effect:hover {
