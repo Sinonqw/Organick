@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/shared/Header";
 import { Roboto, Open_Sans } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
+import Newsletter from "@/components/sections/newsletter/Newsletter";
 
 // Roboto
 const roboto = Roboto({
@@ -51,6 +52,7 @@ export default function RootLayout({
         <CartProvider>
           <Header />
           {children}
+          <Newsletter />
           <Footer />
         </CartProvider>
       </body>

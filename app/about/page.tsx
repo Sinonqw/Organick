@@ -25,8 +25,7 @@ Things for Success"
       <WhyChooseUs />
       <Team />
       <Offer />
-      <Newsletter />
-    </> 
+    </>
   );
 };
 

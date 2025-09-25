@@ -2,7 +2,6 @@ import connectDb from "@/lib/dbConnect";
 import Product from "@/models/Product";
 import Banner from "@/components/shared/Banner";
 import Image from "next/image";
-import Newsletter from "@/components/sections/newsletter/Newsletter";
 import ProductsList from "@/components/sections/products/ProductsList";
 import AddToCartButton from "@/components/sections/cart/AddToCartButton";
 
@@ -76,7 +75,6 @@ const ShopSingle = async ({ params }: IProps) => {
         </h2>
         <ProductsList count={4} products={otherProducts} />
       </section>
-      <Newsletter />
     </>
   );
 };

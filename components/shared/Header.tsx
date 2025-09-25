@@ -10,6 +10,7 @@ const navBarLinks = [
   { text: "Home", link: "/" },
   { text: "About", link: "/about" },
   { text: "Shop", link: "/shop" },
+  { text: "News", link: "/news" },
 ];
 
 const Header = () => {

@@ -24,7 +24,6 @@ Accredited Farmers" />
       <Story />
       <Tips />
       <News /> 
-      <Newsletter />
     </>
   );
 }

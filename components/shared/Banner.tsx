@@ -17,7 +17,6 @@ const Banner = ({ text, img }: IBanner) => {
         src={img}
         alt=""
         layout="fill"
-        objectFit="cover"
         className="absolute inset-0 z-0"
       />
 

@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Banner from "@/components/shared/Banner";
-import Newsletter from "@/components/sections/newsletter/Newsletter";
-import ProductsList, { IProduct } from "@/components/sections/products/ProductsList";
+import ProductsList, {
+  IProduct,
+} from "@/components/sections/products/ProductsList";
 
 const ShopPage = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -23,7 +24,6 @@ const ShopPage = () => {
       <section className="py-23">
         <ProductsList count={12} products={products} />
       </section>
-      <Newsletter />
     </>
   );
 };
