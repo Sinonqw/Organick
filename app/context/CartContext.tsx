@@ -17,6 +17,7 @@ export interface CartContextType {
   removeItem: (id: string) => void;
   total: number;
   clearCart: () => void;
+  totalQuantity: number;
 }
 
 // Создаем контекст
@@ -28,7 +29,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   // Функция для добавления товара в корзину
   const addItem = (item: Omit<CartItem, "quantity">) => {
-    const existingItem = cartItems.find((cartItem) => cartItem._id === item._id);
+    const existingItem = cartItems.find(
+      (cartItem) => cartItem._id === item._id
+    );
 
     if (existingItem) {
       setCartItems(
@@ -58,8 +61,19 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     return acc + cartItem.cost * cartItem.quantity;
   }, 0);
 
+  const totalQuantity = cartItems.reduce((acc, i) => acc + i.quantity, 0);
+
   return (
-    <CartContext.Provider value={{ cartItems, addItem, removeItem, total, clearCart }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addItem,
+        removeItem,
+        total,
+        clearCart,
+        totalQuantity,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

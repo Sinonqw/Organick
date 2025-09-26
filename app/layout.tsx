@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/shared/Header";
+import Header from "@/components/shared/Header/Header";
 import { Roboto, Open_Sans } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
