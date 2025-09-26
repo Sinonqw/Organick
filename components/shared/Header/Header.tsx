@@ -1,9 +1,7 @@
 "use client";
-
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useCart } from "@/app/context/CartContext";
 import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import DesktopMenu from "./DesktopMenu";
@@ -12,7 +10,6 @@ import Cart from "./MobileMenu/Cart";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { cartItems, totalQuantity } = useCart();
   const pathname = usePathname();
 
   const getIsActive = (link: string) =>
