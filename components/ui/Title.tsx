@@ -1,6 +1,5 @@
 "use client";
 import React, { ReactNode } from "react";
-import { motion } from "framer-motion";
 
 interface ITitle {
   children: ReactNode;
@@ -16,17 +15,14 @@ const Title = ({
   bold = "extrabold",
 }: ITitle) => {
   return (
-    <motion.h2
-      initial={{ transform: "translateX(-100px)" }}
-      animate={{ transform: "translateX(0px)" }}
-      transition={{ type: "spring" }}
+    <h2
       className={`roboto ${
         bold === "medium" ? "font-medium" : "font-extrabold"
       } ${className}`}
       style={{ color }}
     >
       {children}
-    </motion.h2>
+    </h2>
   );
 };
 

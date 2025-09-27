@@ -1,6 +1,7 @@
+"use client";
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface IButton {
   children: ReactNode;
@@ -19,13 +20,20 @@ const Button = ({
   href,
 }: IButton) => {
   return (
-    <Link
-      href={`${href}`}
+    <motion.a
+      href={href}
+      initial={{ scale: 1 }}
+      whileHover={{
+        scale: 1.05,
+        y: -2,
+        boxShadow: "0px 8px 20px rgba(0,0,0,0.25)",
+      }}
+      whileTap={{ scale: 0.95, y: 0 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`
-        roboto font-bold rounded-[16px] gap-[10px] inline-flex items-center justify-center 
-        transition-all duration-300 transform hover:scale-105 
-        ${className}
-      `}
+    roboto font-bold rounded-[16px] gap-[10px] inline-flex items-center justify-center 
+    ${className}
+  `}
       style={{
         backgroundColor: colorBg,
         color: colorText,
@@ -39,7 +47,7 @@ const Button = ({
         height={19}
         className="inline-block ml-[10px] transition-transform duration-300 transform group-hover:translate-x-1"
       />
-    </Link>
+    </motion.a>
   );
 };
 

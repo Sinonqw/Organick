@@ -3,6 +3,19 @@ import Subtitle from "@/components/ui/Subtitle";
 import Title from "@/components/ui/Title";
 import React, { useEffect, useState } from "react";
 import ProductsList from "./ProductsList";
+import { motion, Variants } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.3 },
+  },
+};
+
+const itemVariants = {
+  hidden: {opacity: 0, y: -50},
+  visible: {opacity: 1, y: 0}
+}
 
 interface IProduct {
   _id: string;
@@ -25,14 +38,21 @@ const OurProducts = () => {
   }, []);
 
   return (
-    <section className="py-12 sm:py-24 lg:py-44">
-      <div className="text-center mb-8 sm:mb-10">
+    <motion.section
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{once: true, amount: 0.3}}
+    className="py-12 sm:py-24 lg:py-44">
+      <motion.div 
+      variants={itemVariants}
+      className="text-center mb-8 sm:mb-10">
         <Subtitle className="mb-2 text-4xl">Categories</Subtitle>
         <Title className="text-4xl sm:text-5xl lg:text-6xl">Our Products</Title>
-      </div>
+      </motion.div>
 
       <ProductsList count={8} products={products} />
-    </section>
+    </motion.section>
   );
 };
 

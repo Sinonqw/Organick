@@ -50,7 +50,17 @@ const Benefits = () => {
       </div>
 
       {/* Заголовки + отзыв */}
-      <div className="relative z-10 max-w-[800px] mx-auto text-center pb-16 mb-16 sm:pb-[102px] sm:mb-[102px] border-b border-gray-300 px-4">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -15 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative z-10 max-w-[800px] mx-auto text-center pb-16 mb-16 sm:pb-[102px] sm:mb-[102px] border-b border-gray-300 px-4"
+      >
         <div className="mb-8 sm:mb-12">
           <Subtitle className="mb-2 text-2xl sm:text-3xl lg:text-4xl">
             Testimonial
@@ -111,7 +121,7 @@ const Benefits = () => {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* Карточки преимуществ */}
       <div className="relative z-10 gap-3 max-w-full lg:max-w-[1030px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-items-center sm:gap-3 lg:gap-16">
@@ -124,4 +134,3 @@ const Benefits = () => {
 };
 
 export default Benefits;
-

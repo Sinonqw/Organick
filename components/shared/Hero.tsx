@@ -10,7 +10,10 @@ import Button from "../ui/Button";
 const containerVariants: Variants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.3 },
+    transition: { 
+      delayChildren: 0.4,
+      staggerChildren: 0.3 
+    },
   },
 };
 
@@ -28,13 +31,14 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[600px] lg:h-[900px] mb-12 sm:mb-24">
       {/* Background Image */}
-      <Image
-        src="/home-hero-bg.png"
-        alt="A plate of healthy food"
-        layout="fill"
-        objectFit="cover"
-        className="z-10"
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute inset-0"
+      >
+        <Image src="/home-hero-bg.png" layout="fill" alt="" objectFit="cover" />
+      </motion.div>
 
       {/* Text Content */}
       <motion.div

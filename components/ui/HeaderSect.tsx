@@ -1,7 +1,21 @@
+"use client";
 import React from "react";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
 import Button from "./Button";
+import { motion, Variants } from "framer-motion";
+
+const headerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const headerItemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 interface IHeaderSect {
   subtitleText: string;
@@ -27,8 +41,17 @@ const HeaderSect = ({
   href,
 }: IHeaderSect) => {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4 sm:gap-6 mb-8 sm:mb-12">
-      <div className="max-w-[700px] text-center sm:text-left">
+    <motion.div
+      variants={headerItemVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4 sm:gap-6 mb-8 sm:mb-12"
+    >
+      <motion.div
+        variants={headerItemVariants}
+        className="max-w-[700px] text-center sm:text-left"
+      >
         <Subtitle
           color={subtitleColor}
           className="mb-2 text-2xl sm:text-3xl lg:text-4xl"
@@ -38,19 +61,21 @@ const HeaderSect = ({
         <Title color={titleColor} className="text-3xl sm:text-4xl lg:text-5xl">
           {titleText}
         </Title>
-      </div>
+      </motion.div>
 
       {href && (
-        <Button
-          href={href}
-          colorBg={btnBgColor}
-          colorText={btnTextColor}
-          className={btnClasses}
-        >
-          {btnText}
-        </Button>
+        <motion.div variants={headerItemVariants}>
+          <Button
+            href={href}
+            colorBg={btnBgColor}
+            colorText={btnTextColor}
+            className={btnClasses}
+          >
+            {btnText}
+          </Button>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
