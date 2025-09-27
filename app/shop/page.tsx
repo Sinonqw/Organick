@@ -22,7 +22,13 @@ const ShopPage = () => {
     <>
       <Banner img="/banners/shopB.jpg" text="Shop" />
       <section className="py-23">
-        <ProductsList count={12} products={products} />
+        {products.length === 0 ? (
+          <div className="flex justify-center items-center h-64">
+            <span className="loader w-10 h-10 border-4 border-t-[#274C5B] border-gray-300 rounded-full animate-spin"></span>
+          </div>
+        ) : (
+          <ProductsList count={12} products={products} />
+        )}
       </section>
     </>
   );
