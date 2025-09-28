@@ -17,11 +17,15 @@ const Button = ({
   colorBg = "#EFD372",
   colorText = "white",
   className,
+  onClick,
   href,
 }: IButton) => {
+  const Tag = href ? motion.a : motion.button;
+
   return (
-    <motion.a
+    <Tag
       href={href}
+      onClick={onClick}
       initial={{ scale: 1 }}
       whileHover={{
         scale: 1.05,
@@ -31,9 +35,9 @@ const Button = ({
       whileTap={{ scale: 0.95, y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`
-    roboto font-bold rounded-[16px] gap-[10px] inline-flex items-center justify-center 
-    ${className}
-  `}
+        roboto font-bold rounded-[16px] gap-[10px] inline-flex items-center justify-center 
+        ${className}
+      `}
       style={{
         backgroundColor: colorBg,
         color: colorText,
@@ -47,7 +51,7 @@ const Button = ({
         height={19}
         className="inline-block ml-[10px] transition-transform duration-300 transform group-hover:translate-x-1"
       />
-    </motion.a>
+    </Tag>
   );
 };
 

@@ -48,7 +48,8 @@ const OurProducts = () => {
     <motion.section
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"         // запускает анимацию при попадании в экран
+      viewport={{ once: true, amount: 0.2 }} // once: true = только один раз, amount: 0.2 = 20% секции видно
       className="py-12 sm:py-24 lg:py-44 px-4"
     >
       {/* Заголовок */}
