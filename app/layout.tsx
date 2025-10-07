@@ -35,7 +35,7 @@ const yellowtail = Yellowtail({
 
 export const metadata: Metadata = {
   title: "Organick",
-  description: "Hui",
+  description: "",
 };
 
 export default function RootLayout({
